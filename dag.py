@@ -19,7 +19,13 @@ dag = DAG(
  schedule_interval=None
 )
 
+t1 = DummyOperator(
+    task_id='print_date',
+    bash_command='date',
+    dag=dag,
+)
+
 with dag:
   for i in range(50000):
-      tasks = DummyOperator(task_id=’{}’.format(i),dag=dag,
+      tasks = DummyOperator(task_id=’{print_date}’.format(i),dag=dag,
                           pool=’default_pool)
