@@ -30,7 +30,7 @@ def create_dag(dag_id,
 
 
 # build a dag for each number in range(10)
-for n in range(1, 10):
+for n in range(1, 10000):
     dag_id = 'test3_{}'.format(str(n))
 
     default_args = {'owner': 'airflow',
