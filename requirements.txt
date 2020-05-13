@@ -1,1 +1,1 @@
-kubernetes
+apache-airflow[kubernetes]
